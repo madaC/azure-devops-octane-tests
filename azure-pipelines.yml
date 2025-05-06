@@ -12,9 +12,16 @@ pool: Default
 steps:
 - task: octane-start-task@2
   inputs:
+        OctaneServiceConnection: 'connectionOctane'
+        WorkspaceList: '38001'
+        CreatePipelineCheckbox: true
+
+- task: octane-test-runner-start-task@1
+  inputs:
     OctaneServiceConnection: 'connectionOctane'
     WorkspaceList: '38001'
-    CreatePipelineCheckbox: true
+    Framework: 'junit'
+
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
