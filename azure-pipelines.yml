@@ -13,13 +13,13 @@ steps:
 - task: octane-start-task@2
   inputs:
         OctaneServiceConnection: 'connectionOctane'
-        WorkspaceList: '38001'
+        WorkspaceList: '1002'
         CreatePipelineCheckbox: true
 
 - task: octane-test-runner-start-task@1
   inputs:
     OctaneServiceConnection: 'connectionOctane'
-    WorkspaceList: '38001'
+    WorkspaceList: '1002'
     Framework: 'junit'
 
 
@@ -61,4 +61,4 @@ steps:
   inputs:
     OctaneServiceConnection: 'connectionOctane'
 #    CucumberReportPath: '$(System.DefaultWorkingDirectory)/results'
-    WorkspaceList: '38001'
+    WorkspaceList: '1002'
